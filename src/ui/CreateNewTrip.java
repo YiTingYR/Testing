@@ -27,7 +27,7 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import lib.*;
 public class CreateNewTrip extends JFrame
 {
      public static String now(String dateFormat) {
