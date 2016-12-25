@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlTransient;
 //    @NamedQuery(name = "Ordertable.findByOrderdate", query = "SELECT o FROM Ordertable o WHERE o.orderdate = :orderdate")})
 public class Ordertable2 implements Serializable {
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "orderid")
-    //private Collection<Payment> paymentCollection;
+    private Collection<Payment> paymentCollection;
     private static final long serialVersionUID = 1L;
 //    @Id
 //    @Basic(optional = false)
@@ -50,7 +50,7 @@ public class Ordertable2 implements Serializable {
 //        @JoinColumn(name = "TRIPNO", referencedColumnName = "TRIPNO"),
 //        @JoinColumn(name = "SEATNO", referencedColumnName = "SEATNO")})
 //    @ManyToMany
-    //private Collection<Tripseat> tripseatCollection;
+    private Collection<Tripseat> tripseatCollection;
 
     public Ordertable2() {
     }
@@ -81,13 +81,13 @@ public class Ordertable2 implements Serializable {
     }
 
     @XmlTransient
-    /*public Collection<Tripseat> getTripseatCollection() {
+    public Collection<Tripseat> getTripseatCollection() {
         return tripseatCollection;
     }
 
     public void setTripseatCollection(Collection<Tripseat> tripseatCollection) {
         this.tripseatCollection = tripseatCollection;
-    }*/
+    }
 
     @Override
     public int hashCode() {
@@ -114,13 +114,13 @@ public class Ordertable2 implements Serializable {
         return "domain.Ordertable[ orderid=" + orderid + " ]";
     }
 
-    //@XmlTransient
-    /*public Collection<Payment> getPaymentCollection() {
+    @XmlTransient
+    public Collection<Payment> getPaymentCollection() {
         return paymentCollection;
     }
 
     public void setPaymentCollection(Collection<Payment> paymentCollection) {
         this.paymentCollection = paymentCollection;
-    }*/
+    }
     
 }
