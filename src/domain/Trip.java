@@ -28,10 +28,10 @@ public class Trip implements Serializable {
     private String routeid;
     private String depDateStr;//needed for search purpose
     private Route route;
-    //private Bus bus;
+    private Bus bus;
     //////////SUM/////////////////
     
-    //private List<Tripseat> tripseatList;
+    private List<Tripseat> tripseatList;
 
     public Trip() {
     }
@@ -56,16 +56,16 @@ public class Trip implements Serializable {
     
     ////SUM/////////////////////////
     //for search result purpose
-//    public Trip(String tripNo, String depDate, String depTime, double price, int availableSeat, Route route, Bus bus){
-//        this.tripno = tripNo;
-//        this.depDateStr = depDate;
-//        this.departtime = depTime;
-//        this.tripprice = price;
-//        this.availableseat = availableSeat;
-//        this.route = route;
-//        this.bus = bus;
-//
-//    }
+    public Trip(String tripNo, String depDate, String depTime, double price, int availableSeat, Route route, Bus bus){
+        this.tripno = tripNo;
+        this.depDateStr = depDate;
+        this.departtime = depTime;
+        this.tripprice = price;
+        this.availableseat = availableSeat;
+        this.route = route;
+        this.bus = bus;
+
+    }
     ///SUM///////////////////////
 
     public String getTripno() {
@@ -163,23 +163,23 @@ public class Trip implements Serializable {
         this.route = route;
     }
     
-//    public Bus getBus(){
-//        return bus;
-//    }
-//    
-//    public void setBus(Bus bus){
-//        this.bus = bus;
-//    }
+    public Bus getBus(){
+        return bus;
+    }
+    
+    public void setBus(Bus bus){
+        this.bus = bus;
+    }
     //////////////SUM//////////////////
     
     
-//    public List<Tripseat> getTripseatList() {
-//        return tripseatList;
-//    }
-//
-//    public void setTripseatList(List<Tripseat> tripseatList) {
-//        this.tripseatList = tripseatList;
-//    }
+    public List<Tripseat> getTripseatList() {
+        return tripseatList;
+    }
+
+    public void setTripseatList(List<Tripseat> tripseatList) {
+        this.tripseatList = tripseatList;
+    }
 
     @Override
     public int hashCode() {

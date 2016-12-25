@@ -14,7 +14,7 @@ public class Ordertable implements Serializable {
 
     private Date orderdate;
     
-    //private List<Tripseat> tripseatList;
+    private List<Tripseat> tripseatList;
 
     public Ordertable() {
     }
@@ -44,13 +44,13 @@ public class Ordertable implements Serializable {
         this.orderdate = orderdate;
     }
 
-    /*public List<Tripseat> getTripseatList() {
+    public List<Tripseat> getTripseatList() {
         return tripseatList;
     }
 
     public void setTripseatList(List<Tripseat> tripseatList) {
         this.tripseatList = tripseatList;
-    }*/
+    }
 
 
     @Override
