@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="ezWayPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>dm.Seat</class>
+    <class>dm.Bus</class>
+    <class>dm.Driver</class>
+    <class>dm.Payment</class>
+    <class>dm.Authentication</class>
+    <class>dm.Staff</class>
+    <class>dm.Tripseat</class>
+    <class>dm.Ordertable</class>
+    <class>dm.Driverschedule</class>
+    <class>dm.Trip</class>
+    <class>dm.Route</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/ezwaydb"/>
+      <property name="javax.persistence.jdbc.password" value="nbuser"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.user" value="nbuser"/>
+    </properties>
+  </persistence-unit>
+</persistence>
